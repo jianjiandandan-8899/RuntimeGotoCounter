@@ -70,6 +70,14 @@ The example application (`ExampleWithGoto.java`) contains `goto` statements impl
 
 3. **SootUtils**: This class uses the Soot framework to instrument the bytecode of the example application. It inserts instructions to update the `gotoCount` field each time a `goto` statement is encountered.
 
+## Expected Output
+
+After running the instrumented application, you should see output similar to the following:
+
+```
+Goto statements executed: X
+```
+
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request with your changes.
