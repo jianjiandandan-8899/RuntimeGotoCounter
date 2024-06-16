@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Premain-Class: org.example.GotoAgent
-Build-Jdk-Spec: 1.8
-Created-By: Maven Jar Plugin 3.2.0
-
