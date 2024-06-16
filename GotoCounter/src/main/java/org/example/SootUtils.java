@@ -37,14 +37,14 @@ public class SootUtils {
 
         // Modify the class to count goto statements
         for (SootMethod method : sootClass.getMethods()) {
-            System.out.println("Processing method: " + method.getSignature());
+            //System.out.println("Processing method: " + method.getSignature());
             if (method.isConcrete()) {
                 try {
                     Body body = method.retrieveActiveBody();
                     Iterator<Unit> iterator = body.getUnits().snapshotIterator();
                     while (iterator.hasNext()) {
                         Unit unit = iterator.next();
-                        System.out.println("Original unit: " + unit);
+                        //System.out.println("Original unit: " + unit);
                         if (unit instanceof GotoStmt ) {
                             //System.out.println("Found GOTO or IF statement in method: " + method.getName() + unit);
                             insertGotoCount(body, unit);
