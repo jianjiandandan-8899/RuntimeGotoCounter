@@ -18,8 +18,8 @@ This project uses the Soot framework to instrument Java bytecode to count the nu
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/goto-counter.git
-   cd goto-counter
+   git clone https://github.com/jianjiandandan-8899/RuntimeGotoCounter
+   cd GotoCounter
    ```
 
 2. Build the project using Maven:
@@ -33,12 +33,12 @@ This project uses the Soot framework to instrument Java bytecode to count the nu
 
 1. Compile your Java application (if not already compiled):
    ```sh
-   javac -d target/classes src/main/java/your/package/ExampleWithGoto.java
+   javac -d target/classes src/main/java/org/example/ExampleWithGoto.java
    ```
 
 2. Run the application with the Java agent:
    ```sh
-   java -javaagent:target/GotoCounterProject-1.0-SNAPSHOT-jar-with-dependencies.jar -cp target/classes your.package.ExampleWithGoto
+   java -javaagent:target/GotoCounter-1.0-SNAPSHOT.jar -cp target/GotoCounter-1.0-SNAPSHOT.jar org.example.ExampleWithGoto
    ```
 
 ### Example
@@ -53,13 +53,13 @@ The example application (`ExampleWithGoto.java`) contains `goto` statements impl
 ├── src
 │   └── main
 │       └── java
-│           └── your
-│               └── package
+│           └── org
+│               └── example
 │                   ├── GotoAgent.java          # Java agent for instrumenting bytecode
 │                   ├── ExampleWithGoto.java    # Example application with goto statements
 │                   └── SootUtils.java          # Utility class for using Soot to instrument bytecode
 └── target
-    └── GotoCounterProject-1.0-SNAPSHOT-jar-with-dependencies.jar  # Generated JAR file
+    └── GotoCounter-1.0-SNAPSHOT.jar  # Generated JAR file
 ```
 
 ## How It Works
@@ -78,6 +78,3 @@ Contributions are welcome! Please open an issue or submit a pull request with yo
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
-
-If you have any questions or suggestions, please feel free to contact me at [your.email@example.com](mailto:your.email@example.com).
